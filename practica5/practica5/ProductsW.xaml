@@ -1,0 +1,41 @@
+﻿<Window x:Class="practica5.ProductsW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practica5"
+        mc:Ignorable="d"
+        Title="Products" Height="450" Width="800">
+    <Grid>
+        <Button Content="Назад" Margin="10,10,0,392" Click="Button_Click" HorizontalAlignment="Left" Width="56"></Button>
+        <DataGrid x:Name="ProductT" DataGridCell.Selected="ProductT_Selected" SelectedCellsChanged="ProductT_SelectedCellsChanged" AutoGenerateColumns="False" EnableRowVirtualization="True"
+                    ItemsSource="{Binding }" Margin="43,74,460,73" HorizontalAlignment="Left"
+                    RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="ProductT_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="ProductID" Binding="{Binding ProductID}"
+                                    Header="Номер продукта" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="ProductName" Binding="{Binding ProductName}"
+                                    Header="Наименование" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="ProductSort" Binding="{Binding ProductSort}"
+                                    Header="Сорт" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="ProductGroup" Binding="{Binding ProductGroup}"
+                                    Header="Группа" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name ="delete" Content="Удалить" Margin="513,229,0,164" Click="delete_Click" HorizontalAlignment="Left" Width="128"></Button>
+        <Button x:Name ="newreg" Content="Добавить" Margin="660,229,0,164" Click="newreg_Click" HorizontalAlignment="Left" Width="99"></Button>
+        <Button x:Name ="update" Content="Обновить" Margin="660,277,0,116" Click="update_Click" HorizontalAlignment="Left" Width="99"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="493,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Сорт:" HorizontalAlignment="Left" Margin="493,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Группа:" HorizontalAlignment="Left" Margin="493,150,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding SelectedItem.ProductName, ElementName=ProductT}" x:Name="prname" HorizontalAlignment="Left" Margin="638,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox Text="{Binding SelectedItem.ProductSort, ElementName=ProductT}" x:Name="prsort" HorizontalAlignment="Left" Margin="638,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox Text="{Binding SelectedItem.ProductGroup, ElementName=ProductT}" x:Name="prgroup" HorizontalAlignment="Left" Margin="638,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <Label Content="Номер продукта:" HorizontalAlignment="Left" Margin="493,56,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding SelectedItem.ProductID, ElementName=ProductT}" x:Name="prID" HorizontalAlignment="Left" Margin="638,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <Button x:Name ="savwchanges" Content="Сохранить изменения" Margin="513,275,0,118" Click="savwchanges_Click" HorizontalAlignment="Left" Width="128"/>
+
+
+    </Grid>
+</Window>

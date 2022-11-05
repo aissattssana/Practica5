@@ -1,0 +1,19 @@
+﻿<Window x:Class="practica5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practica5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Label Content="Цены на мясо и молоко" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25"></Label>
+        <Label Content="Программа создана для установки цен на мясную и молочную продукцию" HorizontalAlignment="Center" Margin="0,69,0,0" VerticalAlignment="Top" FontFamily="Timew New Roman" FontSize="18" Width="640"></Label>
+        <Label Content="выберите дальнейшие действия:" HorizontalAlignment="Left" Margin="80,106,0,0" VerticalAlignment="Top" FontFamily="Timew New Roman" FontSize="18" Width="311"></Label>
+        <Button Content="Регионы" Margin="92,155,564,217" Click="Button_Click"></Button>
+        <Button Content="Продукты" Margin="311,155,345,217" Click="Button_Click_1" />
+        <Button Content="Цены" Margin="526,155,130,217" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PracticaModelContainer" CdmEntityContainer="PracticaEntities1">
+    <EntitySetMapping Name="Plant">
+      <EntityTypeMapping TypeName="PracticaModel.Plant">
+        <MappingFragment StoreEntitySet="Plant">
+          <ScalarProperty Name="PlantID" ColumnName="PlantID" />
+          <ScalarProperty Name="PlantName" ColumnName="PlantName" />
+          <ScalarProperty Name="PlantAddress" ColumnName="PlantAddress" />
+          <ScalarProperty Name="PlantPhonenumber" ColumnName="PlantPhonenumber" />
+          <ScalarProperty Name="ResponsiblePersonID" ColumnName="ResponsiblePersonID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceList">
+      <EntityTypeMapping TypeName="PracticaModel.PriceList">
+        <MappingFragment StoreEntitySet="PriceList">
+          <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="PlantID" ColumnName="PlantID" />
+          <ScalarProperty Name="ResponsiblePersonID" ColumnName="ResponsiblePersonID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DateOfChange" ColumnName="DateOfChange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="PracticaModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="PracticaModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResponsiblePerson">
+      <EntityTypeMapping TypeName="PracticaModel.ResponsiblePerson">
+        <MappingFragment StoreEntitySet="ResponsiblePerson">
+          <ScalarProperty Name="ResponsiblePersonID" ColumnName="ResponsiblePersonID" />
+          <ScalarProperty Name="ResponsiblePersonName" ColumnName="ResponsiblePersonName" />
+          <ScalarProperty Name="ResponsiblePersonPost" ColumnName="ResponsiblePersonPost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
